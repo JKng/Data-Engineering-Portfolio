@@ -1,6 +1,6 @@
 # Criação de Pipeline de dados com Apache Airflow e PostgreSQL
 
-```
+``` python
 from airflow import DAG
 from datetime import datetime, timedelta
 from airflow.providers.postgres.operators.postgres import PostgresOperator
@@ -42,9 +42,9 @@ with DAG('dag_pipeline',
 task1 >> task2 >> task3 >> task4
 ```
 
-# Criação das tabelas e inserção de dados estão em SQL
+# Criação das tabelas e inserção de dados em SQL
 
-```
+``` python
 ### criar TB_Categoria
  
 create table if not exists TB_Categoria (
