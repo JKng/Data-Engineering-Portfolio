@@ -22,7 +22,7 @@ with DAG('dag_pipeline',
     df.to_csv(csv_output, index=False, sep='\t')
     print (df)
 
-#### Carregar dados: ERRO conexão com o Postgres
+#### Carregar dados: conexão com o Postgres
     with open('Users\vckon\bixairflow-docker\airflow-docker\categoria.csv','r') as file:
         next(file)
         for row in file:
