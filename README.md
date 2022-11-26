@@ -1,9 +1,17 @@
 # Criação de Pipeline de dados com Apache Airflow e PostgreSQL
 
 ``` python
+# Importar  bibliotecas Apache Airflow
 from airflow import DAG
-from datetime import datetime, timedelta
 from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
+# Importar bibliotecas Python
+from datetime import datetime, timedelta
+import requests
+import pandas as pd
+import csv
+import json
  
 ### Agendador de movimentação dos dados:
 ### Uma vez por dia à meia-noite  0 0 * * *
