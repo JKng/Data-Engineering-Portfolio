@@ -1,4 +1,4 @@
-# Ler API
+MANIPULAR UMA API
 
 # intervalo de datas
 data_inicio = datetime.today()
