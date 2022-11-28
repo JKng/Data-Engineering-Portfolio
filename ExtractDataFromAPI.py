@@ -1,5 +1,5 @@
 # Extrair dados da previsão do tempo de uma API
-# Criar uma pasta utilizando Python;
+# Criar uma pasta Local utilizando Python;
 # Salvar os arquivos extraídos em csv.
 
 # intervalo de datas
