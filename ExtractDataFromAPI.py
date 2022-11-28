@@ -25,7 +25,8 @@ dados = pd.read_csv(URL)
 # ver as primeiras linhas desses dados no terminal (Ctrl+J) digitar o comando python3 seguido do nome deste arquivo .py
 print(dados.head())
 
-# salvar esses arquivos em uma pasta. Criar a variável file_path que receberá o caminho da pasta na qual queremos salvá-los. 
+# salvar esses arquivos em uma pasta (de preferência na NUVEM), aqui será salvo em uma PASTA LOCAL 
+# Criar a variável file_path que receberá o caminho da pasta na qual queremos salvá-los 
 # Na barra lateral do Visual Code (onde se encontra o nome do folder que estamos trabalhando), 
 # clique sobre ela e, em seguida, no botão direito do mouse, selecione "Copy Path" e cole na variável criada,
 # Esse é o mesmo path do arquivo .py deste projeto
