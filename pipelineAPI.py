@@ -1,16 +1,4 @@
-# Criação de Pipeline de dados com Apache Airflow e PostgreSQL
-
-# Importar  bibliotecas Apache Airflow
-from airflow import DAG
-from airflow.providers.postgres.operators.postgres import PostgresOperator
-from airflow.operators.python import PythonOperator
-from airflow.operators.bash import BashOperator
-# Importar bibliotecas Python
-from datetime import datetime, timedelta
-import requests
-import pandas as pd
-import csv
-import json
+# Ler API
 
 # intervalo de datas
 data_inicio = datetime.today()
@@ -43,4 +31,4 @@ dados.to_csv(file_path + 'dados_brutos.csv')
 dados[['datetime', 'tempmin', 'temp', 'tempax']].to_csv(file_path + 'temperaturas.csv')
 dados[['datetime', 'description', 'icon']].to_csv(file_path + 'condicoes.csv')
 
-```
+
