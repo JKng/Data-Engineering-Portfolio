@@ -7,5 +7,5 @@ This is a personal project I've been working on. The aim was to build a simple d
 <img src="https://github.com/JKng/Pipeline-de-dados/blob/main/elt-pipeline.png" width="800" height="350">
 
 Steps taken:
-Create DAG
-ETL Incremental Data Loading (carga incremental)
+- Create DAG
+- ETL Incremental Data Loading (carga incremental)
