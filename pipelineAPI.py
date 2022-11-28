@@ -14,14 +14,16 @@ key = 'ANZQ5K8QQP8BXZ85F4EQ2FPK'
 
 # função join() a url estã dividida em duas partes: a primeira corresponde à url da documentação, 
 # enquanto a segunda, onde há f string, elenca as variáveis definidas anteriormente
-# e o formato com o qual desejamos que os dados venham (csv)
+# e o formato com o qual desejamos que os dados venham (csv ou json)
+# o unitGroup= permite passar o sistema de unidade que quer que os dados retornem (Celsius)
+# condensação dos dados em dias (include=days), e não em horas ou meses
 
 URL = join('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/',
             f'{city}/{data_inicio}/{data_fim}?unitGroup=metric&include=days&key={key}&contentType=csv')
 
 dados = pd.read_csv(URL)
 
-# ver as primeiras linhas desses dados no terminal
+# ver as primeiras linhas desses dados no terminal (Ctrl+J)
 print(dados.head())
 
 file_path = f'home/millenagena/Documents/datapipeline/semana={data_inicio}'
