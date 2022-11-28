@@ -23,9 +23,11 @@ URL = join('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/se
 
 dados = pd.read_csv(URL)
 
-# ver as primeiras linhas desses dados no terminal (Ctrl+J)
+# ver as primeiras linhas desses dados no terminal (Ctrl+J) digitar o comando python3 seguido do nome deste arquivo.py
 print(dados.head())
 
+# salvar esses arquivos em uma pasta. Vamos fechar o terminal e criar a variável file_path que receberá o caminho da pasta na qual queremos salvá-los. 
+# Para isso, acesse a barra lateral, clique sobre ela e, em seguida, no botão direito do mouse, selecione "Copy Path" e cole na variável criada.
 file_path = f'home/millenagena/Documents/datapipeline/semana={data_inicio}'
 os.mkdir(file_path)
 
