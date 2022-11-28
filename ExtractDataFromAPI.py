@@ -1,4 +1,3 @@
-MANIPULAR UMA API
 
 # intervalo de datas
 data_inicio = datetime.today()
@@ -32,10 +31,13 @@ print(dados.head())
 # Esse é o mesmo path do arquivo .py deste projeto
 # Para criar uma pasta neste path, é só acrescentar / e o nome que quer para a nova pasta
 
-file_path = f'home/millenagena/Documents/datapipeline/semana={data_inicio}'
+file_path = f'home/millenagena/Documents/datapipeline/semana={data_inicio}/'
+# os.mkdir() method in Python is used to create a directory named path with the specified numeric mode.
 os.mkdir(file_path)
 
+# Salvando em 3 arquivos diferentes
 dados.to_csv(file_path + 'dados_brutos.csv')
+# Escolhe as colunas mais relevantes para o projeto
 dados[['datetime', 'tempmin', 'temp', 'tempax']].to_csv(file_path + 'temperaturas.csv')
 dados[['datetime', 'description', 'icon']].to_csv(file_path + 'condicoes.csv')
 
