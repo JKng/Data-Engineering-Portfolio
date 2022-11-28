@@ -13,7 +13,7 @@ city = 'Boston'
 key = 'ANZQ5K8QQP8BXZ85F4EQ2FPK'
 
 # função join() a url estã dividida em duas partes: a primeira corresponde à url da documentação, 
-# enquanto a segunda, onde há f string, elenca as variáveis definidas anteriormente
+# enquanto a segunda, onde há f string (útil para passar uma variável à url), elenca as variáveis definidas anteriormente
 # e o formato com o qual desejamos que os dados venham (csv ou json)
 # o unitGroup= permite passar o sistema de unidade que quer que os dados retornem (Celsius)
 # condensação dos dados em dias (include=days), e não em horas ou meses
@@ -23,11 +23,15 @@ URL = join('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/se
 
 dados = pd.read_csv(URL)
 
-# ver as primeiras linhas desses dados no terminal (Ctrl+J) digitar o comando python3 seguido do nome deste arquivo.py
+# ver as primeiras linhas desses dados no terminal (Ctrl+J) digitar o comando python3 seguido do nome deste arquivo .py
 print(dados.head())
 
-# salvar esses arquivos em uma pasta. Vamos fechar o terminal e criar a variável file_path que receberá o caminho da pasta na qual queremos salvá-los. 
-# Para isso, acesse a barra lateral, clique sobre ela e, em seguida, no botão direito do mouse, selecione "Copy Path" e cole na variável criada.
+# salvar esses arquivos em uma pasta. Criar a variável file_path que receberá o caminho da pasta na qual queremos salvá-los. 
+# Na barra lateral do Visual Code (onde se encontra o nome do folder que estamos trabalhando), 
+# clique sobre ela e, em seguida, no botão direito do mouse, selecione "Copy Path" e cole na variável criada,
+# Esse é o mesmo path do arquivo .py deste projeto
+# Para criar uma pasta neste path, é só acrescentar / e o nome que quer para a nova pasta
+
 file_path = f'home/millenagena/Documents/datapipeline/semana={data_inicio}'
 os.mkdir(file_path)
 
