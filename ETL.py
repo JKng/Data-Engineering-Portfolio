@@ -27,6 +27,9 @@
         )
     conn.commit()
 
+# https://www.youtube.com/watch?v=pxofwuWTs7c
+# Coding With Python :: Learn API Basics to Grab Data with Python
+
 #### Extrair dados: solicitar dataset mais recente API
     def get_funcionario():
         url = 'https://us-central1-bix-tecnologia-prd.cloudfunctions.net/api_challenge_junior'
