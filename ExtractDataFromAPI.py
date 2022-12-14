@@ -11,8 +11,8 @@ data_inicio = data_inicio.strftime('%Y-%m-%d')
 data_fim = data_fim.strftime('%Y-%m-%d')
 
 # variáveis que definem a cidade (city) sobre a qual queremos extrair os dados
-city = 'Boston'
-key = 'ANZQ5K8QQP8BXZ85F4EQ2FPK'
+city = 'inUSA'
+key = '23digits'
 
 # função join() a url estã dividida em duas partes: a primeira corresponde à url da documentação, 
 # enquanto a segunda, onde há f string (útil para passar uma variável à url), elenca as variáveis definidas anteriormente
@@ -35,7 +35,7 @@ print(dados.head())
 # Esse é o mesmo path do arquivo .py deste projeto
 # Para criar uma pasta neste path, é só acrescentar / e o nome que quer para a nova pasta
 
-file_path = f'home/millenagena/Documents/datapipeline/semana={data_inicio}/'
+file_path = f'home/Documents/datapipeline/semana={data_inicio}/'
 # os.mkdir() method in Python is used to create a directory named path with the specified numeric mode.
 os.mkdir(file_path)
 
