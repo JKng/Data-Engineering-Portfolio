@@ -28,21 +28,5 @@ dados = pd.read_csv(URL)
 # ver as primeiras linhas desses dados no terminal (Ctrl+J) digitar o comando python3 seguido do nome deste arquivo .py
 print(dados.head())
 
-# salvar esses arquivos em uma pasta (de preferência na NUVEM), aqui será salvo em uma PASTA LOCAL 
-# Criar a variável file_path que receberá o caminho da pasta na qual queremos salvá-los 
-# Na barra lateral do Visual Code (onde se encontra o nome do folder que estamos trabalhando), 
-# clique sobre ela e, em seguida, no botão direito do mouse, selecione "Copy Path" e cole na variável criada,
-# Esse é o mesmo path do arquivo .py deste projeto
-# Para criar uma pasta neste path, é só acrescentar / e o nome que quer para a nova pasta
-
-file_path = f'home/Documents/datapipeline/semana={data_inicio}/'
-# os.mkdir() method in Python is used to create a directory named path with the specified numeric mode.
-os.mkdir(file_path)
-
-# Salvando em 3 arquivos diferentes
-dados.to_csv(file_path + 'dados_brutos.csv')
-# Escolhe as colunas mais relevantes para o projeto
-dados[['datetime', 'tempmin', 'temp', 'tempax']].to_csv(file_path + 'temperaturas.csv')
-dados[['datetime', 'description', 'icon']].to_csv(file_path + 'condicoes.csv')
 
 
